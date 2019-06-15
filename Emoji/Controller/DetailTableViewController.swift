@@ -44,7 +44,7 @@ class DetailTableViewController: UITableViewController {
     
     private func updateUI() {
         
-        saveButton.isEnabled = symbolTextField.text!.count == 1
+        saveButton.isEnabled = (symbolTextField.text!.containsEmoji && symbolTextField.text!.count == 1)
             && !symbolTextField.text!.isEmpty
             && !nameTextField.text!.isEmpty
             && !descritionTextField.text!.isEmpty
@@ -88,7 +88,7 @@ extension DetailTableViewController: UITextFieldDelegate {
         
         switch textField {
         case symbolTextField:
-            if !symbolTextField.text!.containsEmoji {
+            if !symbolTextField.text!.containsEmoji || symbolTextField.text!.count != 1 {
                 showAlert()
             }
             nameTextField.becomeFirstResponder()
@@ -109,7 +109,7 @@ extension DetailTableViewController {
     
     private func showAlert() {
         
-        let alert = UIAlertController(title: "Wrong format", message: "Please add EMOJI", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Wrong format", message: "Please add one EMOJI", preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .default)
         alert.addAction(action)
         present(alert, animated: true)
