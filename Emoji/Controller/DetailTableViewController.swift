@@ -89,9 +89,12 @@ extension DetailTableViewController {
 extension DetailTableViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    
+        
         switch textField {
         case symbolTextField:
+            if !symbolTextField.text!.containsEmoji {
+                showAlert()
+            }
             nameTextField.becomeFirstResponder()
         case nameTextField:
             descritionTextField.becomeFirstResponder()
@@ -103,15 +106,6 @@ extension DetailTableViewController: UITextFieldDelegate {
             textField.resignFirstResponder()
         }
         return false
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-       
-        if textField == symbolTextField {
-            if !symbolTextField.text!.containsEmoji {
-                showAlert()
-            }
-        }
     }
 }
 
