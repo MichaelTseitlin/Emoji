@@ -23,7 +23,7 @@ class MainTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        emojis = storageManager.loadData() ?? storageManager.loadEmojis()
+        emojis = storageManager.loadData() ?? storageManager.loadDefaultEmojis()
         navigationItem.leftBarButtonItem = editButtonItem
     }
     

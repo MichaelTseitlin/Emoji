@@ -33,7 +33,7 @@ class StorageManager {
         return try? decoder.decode([[Emoji]].self, from: data)
     }
     
-    func loadEmojis() -> [[Emoji]] {
+    func loadDefaultEmojis() -> [[Emoji]] {
         return [
             [Emoji(symbol: "⭐️", name: "Звезда", description: "Жёлтая звезда", usage: "Отмечать хорошее"),
              Emoji(symbol: "🤓", name: "Нерд", description: "Смайлик в очках", usage: "Что-то заумное"),
