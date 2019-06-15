@@ -44,7 +44,7 @@ class DetailTableViewController: UITableViewController {
     
     private func updateUI() {
         
-        saveButton.isEnabled = symbolTextField.text!.containsEmoji
+        saveButton.isEnabled = symbolTextField.text!.count == 1
             && !symbolTextField.text!.isEmpty
             && !nameTextField.text!.isEmpty
             && !descritionTextField.text!.isEmpty
