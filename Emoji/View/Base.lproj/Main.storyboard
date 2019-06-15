@@ -185,40 +185,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Type" id="gD9-Po-xoD">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="jJv-L4-4Ju">
-                                        <rect key="frame" x="0.0" y="355.33333333333337" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jJv-L4-4Ju" id="qmO-xN-pA0">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c6a-ck-uCN">
-                                                    <rect key="frame" x="20" y="11" width="374" height="22"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
-                                                    <connections>
-                                                        <action selector="textEditingChanged:" destination="9pp-4a-OdO" eventType="editingChanged" id="qtR-p3-LKL"/>
-                                                        <outlet property="delegate" destination="9pp-4a-OdO" id="nJO-Na-hJT"/>
-                                                    </connections>
-                                                </textField>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="c6a-ck-uCN" secondAttribute="trailing" id="1ru-F9-IZU"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="c6a-ck-uCN" secondAttribute="bottom" id="PiD-FE-GcD"/>
-                                                <constraint firstItem="c6a-ck-uCN" firstAttribute="leading" secondItem="qmO-xN-pA0" secondAttribute="leadingMargin" id="VVV-nr-5vF"/>
-                                                <constraint firstItem="c6a-ck-uCN" firstAttribute="top" secondItem="qmO-xN-pA0" secondAttribute="topMargin" id="vAe-bE-jG8"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                             <tableViewSection headerTitle="Usage" id="wrA-j9-Zgm">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="jmf-7O-vun">
-                                        <rect key="frame" x="0.0" y="455.33333333333337" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="355.33333333333337" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jmf-7O-vun" id="6nh-2c-UVu">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
@@ -268,7 +238,6 @@
                         <outlet property="nameTextField" destination="WZ8-B4-djI" id="Kdw-9W-ICz"/>
                         <outlet property="saveButton" destination="4hR-hx-CcJ" id="TFA-oq-3o0"/>
                         <outlet property="symbolTextField" destination="776-aV-VZ7" id="AA6-0q-D2R"/>
-                        <outlet property="typeTextField" destination="c6a-ck-uCN" id="QXo-dp-PFL"/>
                         <outlet property="usageTextField" destination="Niv-cn-dn2" id="Hiw-lI-GI1"/>
                     </connections>
                 </tableViewController>

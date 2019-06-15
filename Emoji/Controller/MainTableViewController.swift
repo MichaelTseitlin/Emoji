@@ -39,9 +39,18 @@ class MainTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
-        guard let emojiType = emojis[section].first?.type else { return nil}
-        
-        return emojiType
+        switch section {
+        case 0:
+            return "Разное"
+        case 1:
+            return "Фрукты"
+        case 2:
+            return "Животные"
+        case 3:
+            return "Техника"
+        default:
+            fatalError()
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -102,4 +111,5 @@ class MainTableViewController: UITableViewController {
             tableView.insertRows(at: [indexPath], with: .automatic)
         }
     }
+    
 }

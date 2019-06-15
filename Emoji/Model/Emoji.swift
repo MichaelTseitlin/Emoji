@@ -13,7 +13,6 @@ class Emoji: Codable {
     var symbol: String
     var name: String
     var description: String
-    var type: String
     var usage: String
     
     var encoded: Data? {
@@ -27,20 +26,17 @@ class Emoji: Codable {
         self.init(symbol: emoji.symbol,
                   name: emoji.name,
                   description: emoji.description,
-                  type: emoji.type,
                   usage: emoji.usage)
     }
     
     init(symbol: String = "",
          name: String = "",
          description: String = "",
-         type: String = "",
          usage: String = "")
     {
         self.symbol = symbol
         self.name = name
         self.description = description
-        self.type = type
         self.usage = usage
     }
 }

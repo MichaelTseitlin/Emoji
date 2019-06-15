@@ -21,7 +21,6 @@ class DetailTableViewController: UITableViewController {
     @IBOutlet var symbolTextField: UITextField!
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var descritionTextField: UITextField!
-    @IBOutlet var typeTextField: UITextField!
     @IBOutlet var usageTextField: UITextField!
     
     override func viewDidLoad() {
@@ -30,7 +29,6 @@ class DetailTableViewController: UITableViewController {
         symbolTextField.text = emoji.symbol
         nameTextField.text = emoji.name
         descritionTextField.text = emoji.description
-        typeTextField.text = emoji.type
         usageTextField.text = emoji.usage
         
         updateUI()
@@ -50,7 +48,6 @@ class DetailTableViewController: UITableViewController {
             && !symbolTextField.text!.isEmpty
             && !nameTextField.text!.isEmpty
             && !descritionTextField.text!.isEmpty
-            && !typeTextField.text!.isEmpty
             && !usageTextField.text!.isEmpty
     }
     
@@ -63,7 +60,6 @@ class DetailTableViewController: UITableViewController {
         emoji.symbol = symbolTextField.text ?? ""
         emoji.name = nameTextField.text ?? ""
         emoji.description = descritionTextField.text ?? ""
-        emoji.type = typeTextField.text ?? ""
         emoji.usage = usageTextField.text ?? ""
         
     }
@@ -99,8 +95,6 @@ extension DetailTableViewController: UITextFieldDelegate {
         case nameTextField:
             descritionTextField.becomeFirstResponder()
         case descritionTextField:
-            typeTextField.becomeFirstResponder()
-        case typeTextField:
             usageTextField.becomeFirstResponder()
         default:
             textField.resignFirstResponder()
